@@ -5,10 +5,29 @@
 [[headers]]
   for = "/*"
   [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[redirects]]
+  from = "http://thekcsoft.com/*"
+  to = "https://thekcsoft.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.thekcsoft.com/*"
+  to = "https://thekcsoft.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.thekcsoft.com/*"
+  to = "https://thekcsoft.com/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/*"
