@@ -1,6 +1,7 @@
 [build]
   publish = "."
   command = ""
+  functions = "netlify/functions"
 
 [[headers]]
   for = "/*"
@@ -27,6 +28,12 @@
   from = "https://www.thekcsoft.com/*"
   to = "https://thekcsoft.com/:splat"
   status = 301
+  force = true
+
+[[redirects]]
+  from = "/api/submit-form"
+  to = "/.netlify/functions/submit-form"
+  status = 200
   force = true
 
 [[redirects]]

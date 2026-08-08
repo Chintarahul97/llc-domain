@@ -350,7 +350,7 @@
     return '';
   }
   async function submitToEndpoint(form){
-    const response = await fetch('/api/submit-form.php', {
+    const response = await fetch('/api/submit-form', {
       method: 'POST',
       body: new FormData(form),
       headers: {'Accept': 'application/json'}
@@ -384,7 +384,7 @@
     return {success:true};
   }
   document.querySelectorAll('form').forEach(form => {
-    form.setAttribute('action', '/api/submit-form.php');
+    form.setAttribute('action', '/api/submit-form');
     statusFor(form);
     form.addEventListener('submit', async event => {
       event.preventDefault();

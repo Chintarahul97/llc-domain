@@ -11,7 +11,7 @@ Static website for Kairos Covenant LLC, ready to deploy on Hostinger or Netlify.
 
 ## Production Forms
 
-Forms submit with JavaScript to `/api/submit-form.php` and display inline success/error states without navigating visitors to `/404`.
+Forms submit with JavaScript to `/api/submit-form` and display inline success/error states without navigating visitors to `/404`.
 
 Server-side routing:
 
@@ -22,9 +22,16 @@ Server-side routing:
 
 The PHP endpoint validates required fields, email addresses, honeypot submissions and upload types. Requirement attachments may be PDF, DOC, DOCX or TXT. Resume uploads may be PDF, DOC or DOCX. File uploads are limited to 8 MB.
 
-The endpoint currently uses PHP `mail()`. For higher reliability on Hostinger, configure authenticated SMTP server-side and keep SMTP credentials out of frontend JavaScript and source control.
+Hostinger can use `api/submit-form.php`, which currently uses PHP `mail()`. For higher reliability on Hostinger, configure authenticated SMTP server-side and keep SMTP credentials out of frontend JavaScript and source control.
 
-Current DNS/production checks show `thekcsoft.com` is served by Netlify. When Netlify serves the site, `/api/submit-form.php` is rewritten to the app and the frontend falls back to Netlify Forms instead of exposing PHP source. Configure Netlify form notifications for the four form names if production remains on Netlify.
+Current DNS/production checks show `thekcsoft.com` is served by Netlify. When Netlify serves the site, `/api/submit-form` is rewritten to the Netlify Function in `netlify/functions/submit-form.js`. Add these Netlify environment variables so the function can send email:
+
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_USER`
+- `SMTP_PASS`
+- `SMTP_SECURE` (`true` for port 465, otherwise `false`)
+- `MAIL_FROM` such as `Kairos Covenant Website <info@thekcsoft.com>`
 
 ## Netlify Deployment
 
@@ -33,7 +40,7 @@ Current DNS/production checks show `thekcsoft.com` is served by Netlify. When Ne
 - Entry file: `index.html`
 - Project visibility: Public
 
-If deploying to Netlify instead of Hostinger, use Netlify Functions or Netlify Forms for `/api/submit-form.php` behavior because Netlify does not execute PHP.
+If deploying to Netlify instead of Hostinger, use the included Netlify Function because Netlify does not execute PHP.
 
 If the deployed site says "This site is private", open the site in Netlify and change:
 
