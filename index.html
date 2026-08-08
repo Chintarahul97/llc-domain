@@ -41,7 +41,7 @@
   .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-light);border:1px solid var(--line-light)}.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{background:var(--paper);padding:30px}.band .card{background:var(--paper-2)}.dark .card{background:var(--ink-2);border:1px solid var(--line-dark)}.card .tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:16px}.card ul{list-style:none;margin:16px 0 0;padding:0}.card li{position:relative;padding-left:16px;margin:7px 0;color:var(--muted);font-size:.9rem}.dark .card li{color:var(--dark-muted)}.card li:before{content:"";position:absolute;left:0;top:.7em;width:6px;height:1px;background:var(--gold)}
   .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.cap-card{border-top:2px solid var(--ink);padding-top:18px}.cap-card h3{font-family:var(--display);font-weight:600}.cap-card p{margin:0;color:var(--muted);line-height:1.55}.models{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line-light);border:1px solid var(--line-light)}.model{background:var(--paper);padding:24px}.model b{display:block;margin-bottom:10px}.model p{margin:0;color:var(--muted);line-height:1.55;font-size:.92rem}
   .page{display:none}.page.active{display:block}.page-hero{background:var(--ink);color:var(--dark-text);padding:74px 0}.page-hero h1{font-size:clamp(2rem,4vw,3.55rem)}.page-hero p{color:var(--dark-muted);max-width:760px}.process{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line-light);border:1px solid var(--line-light)}.step{background:var(--paper);padding:22px}.step .num{font-family:var(--mono);font-size:.72rem;color:var(--gold-2);margin-bottom:12px}.doc-list{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.doc{border:1px solid var(--line-light);padding:16px;background:rgba(255,255,255,.28)}.doc small{display:block;color:var(--muted);margin-top:6px}
-  form{display:flex;flex-direction:column;gap:16px}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}label{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:block;margin-bottom:8px}input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line-light);background:#fff;border-radius:3px;font:inherit;color:var(--text)}textarea{min-height:120px;resize:vertical}input:focus,select:focus,textarea:focus,.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid rgba(228,199,102,.7);outline-offset:2px}.check{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.9rem}.check input{width:auto;margin-top:3px}.honeypot{display:none}.form-note{font-size:.85rem;color:var(--muted)}
+  form{display:flex;flex-direction:column;gap:16px}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}label{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);display:block;margin-bottom:8px}input,select,textarea{width:100%;padding:12px 13px;border:1px solid var(--line-light);background:#fff;border-radius:3px;font:inherit;color:var(--text)}textarea{min-height:120px;resize:vertical}input:focus,select:focus,textarea:focus,.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid rgba(228,199,102,.7);outline-offset:2px}.check{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:.9rem}.check input{width:auto;margin-top:3px}.honeypot{display:none}.form-note{font-size:.85rem;color:var(--muted)}.form-status{border:1px solid var(--line-light);padding:14px 16px;border-radius:3px;line-height:1.55;font-weight:600}.form-status[hidden]{display:none}.form-status.success{background:rgba(67,216,193,.12);border-color:rgba(67,216,193,.48);color:#12624f}.form-status.error{background:rgba(201,75,75,.12);border-color:rgba(201,75,75,.45);color:#8b2727}.form-status .btn-row{margin-top:14px}
   .split{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}.contact-list{display:grid;gap:14px}.contact-item{border-bottom:1px solid var(--line-light);padding-bottom:14px}.contact-item b{display:block}.contact-item a{text-decoration:none;color:var(--text)}
   footer{background:var(--ink);color:var(--dark-muted);padding:54px 0}.footer-grid{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:28px}.footer-grid h3,.footer-grid h4{color:var(--dark-text);margin:0 0 14px}.footer-grid a{display:block;text-decoration:none;color:var(--dark-muted);margin:9px 0}.footer-bottom{border-top:1px solid var(--line-dark);margin-top:34px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.86rem}
   @media (max-width:1050px){.links{gap:12px}.links a{font-size:.8rem}.grid-4,.models,.process{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr 1fr}.cap-grid{grid-template-columns:repeat(2,1fr)}}
@@ -191,12 +191,12 @@
     <section class="band"><div class="wrap"><div class="section-head"><h2>How We Support Vendors</h2></div><div class="grid-3"><div class="card">Technology Candidate Sourcing</div><div class="card">Candidate Screening</div><div class="card">Specialized Skill Recruiting</div><div class="card">Staff Augmentation</div><div class="card">Project / SOW Delivery</div><div class="card">AI &amp; Data Services</div></div></div></section>
     <section><div class="wrap"><div class="section-head"><h2>Vendor Workflow</h2></div><div class="process"><div class="step"><div class="num">01</div><b>Receive Requirement</b></div><div class="step"><div class="num">02</div><b>Qualify Requirement</b></div><div class="step"><div class="num">03</div><b>Source &amp; Screen</b></div><div class="step"><div class="num">04</div><b>Candidate Submission</b></div><div class="step"><div class="num">05</div><b>Interview &amp; Selection</b></div><div class="step"><div class="num">06</div><b>Onboarding &amp; Compliance</b></div><div class="step"><div class="num">07</div><b>Ongoing Support</b></div></div></div></section>
     <section class="band"><div class="wrap"><div class="section-head"><h2>Vendor Readiness</h2><p>Standard company, tax and compliance documentation can be provided during supplier onboarding as applicable.</p></div><div class="doc-list"><div class="doc">Company Formation Documentation<small>Available during onboarding</small></div><div class="doc">W-9<small>Available during onboarding</small></div><div class="doc">Certificate of Good Standing<small>Available during onboarding</small></div><div class="doc">Capability Statement<small>Available when finalized</small></div><div class="doc">Certificate of Insurance<small>Available during onboarding</small></div><div class="doc">Worker Compliance Documentation<small>Available during onboarding</small></div><div class="doc">ACH / Payment Documentation<small>Available during onboarding</small></div><div class="doc">Contract Documentation<small>Available during onboarding</small></div></div></div></section>
-    <section id="partnership-form"><div class="wrap split"><div><h2>Request Partnership Discussion</h2><p>Use this form for MSP, prime vendor, subcontracting and project/SOW partnership conversations.</p><p><a href="mailto:partners@thekcsoft.com">partners@thekcsoft.com</a></p></div><form name="vendor-partnership" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="vendor-partnership"><p class="honeypot"><label>Do not fill this out <input name="bot-field"></label></p><div class="form-grid"><div><label for="vp-first">First Name *</label><input id="vp-first" name="first-name" required></div><div><label for="vp-last">Last Name *</label><input id="vp-last" name="last-name" required></div><div><label for="vp-company">Company *</label><input id="vp-company" name="company" required></div><div><label for="vp-title">Job Title</label><input id="vp-title" name="job-title"></div><div><label for="vp-email">Business Email *</label><input id="vp-email" type="email" name="email" required></div><div><label for="vp-phone">Phone</label><input id="vp-phone" name="phone"></div></div><div><label for="vp-type">Partnership Type *</label><select id="vp-type" name="partnership-type" required><option>MSP Supplier</option><option>Prime Vendor</option><option>Staffing Partner</option><option>Subcontracting</option><option>Project / SOW</option><option>AI &amp; Data Services</option><option>Other</option></select></div><div><label for="vp-message">Message *</label><textarea id="vp-message" name="message" required></textarea></div><label class="check"><input type="checkbox" required name="privacy-acknowledgement"> I acknowledge that Kairos Covenant may use this information to respond to my inquiry.</label><button class="btn btn-dark" type="submit">Request Partnership Discussion</button></form></div></section>
+    <section id="partnership-form"><div class="wrap split"><div><h2>Request Partnership Discussion</h2><p>Use this form for MSP, prime vendor, subcontracting and project/SOW partnership conversations.</p><p><a href="mailto:partners@thekcsoft.com">partners@thekcsoft.com</a></p></div><form name="vendor-partnership" method="POST" action="/api/submit-form.php" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="vendor-partnership"><p class="honeypot"><label>Do not fill this out <input name="bot-field"></label></p><div class="form-grid"><div><label for="vp-first">First Name *</label><input id="vp-first" name="first-name" required></div><div><label for="vp-last">Last Name *</label><input id="vp-last" name="last-name" required></div><div><label for="vp-company">Company *</label><input id="vp-company" name="company" required></div><div><label for="vp-title">Job Title</label><input id="vp-title" name="job-title"></div><div><label for="vp-email">Business Email *</label><input id="vp-email" type="email" name="email" required></div><div><label for="vp-phone">Phone</label><input id="vp-phone" name="phone"></div></div><div><label for="vp-type">Partnership Type *</label><select id="vp-type" name="partnership-type" required><option>MSP Supplier</option><option>Prime Vendor</option><option>Staffing Partner</option><option>Subcontracting</option><option>Project / SOW</option><option>AI &amp; Data Services</option><option>Other</option></select></div><div><label for="vp-message">Message *</label><textarea id="vp-message" name="message" required></textarea></div><label class="check"><input type="checkbox" required name="privacy-acknowledgement"> I acknowledge that Kairos Covenant may use this information to respond to my inquiry.</label><button class="btn btn-dark" type="submit">Request Partnership Discussion</button></form></div></section>
   </article>
 
   <article id="submit-requirement" class="page" data-title="Submit a Staffing Requirement | Kairos Covenant" data-description="Share a staffing or project requirement with Kairos Covenant.">
     <section class="page-hero"><div class="wrap"><h1>Tell Us What Talent You Need</h1><p>Share your staffing or project requirement and our team will review the request.</p></div></section>
-    <section><div class="wrap split"><div><h2>Submit Requirement</h2><p>Requirement submissions are reviewed by vendor operations. Use this secure form for active staffing or project needs.</p><p>For partnership questions, contact <a href="mailto:partners@thekcsoft.com">partners@thekcsoft.com</a>.</p></div><form name="submit-requirement" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data"><input type="hidden" name="form-name" value="submit-requirement"><p class="honeypot"><label>Do not fill this out <input name="bot-field"></label></p><div class="form-grid"><div><label>Company Name *</label><input name="company" required></div><div><label>Contact Name *</label><input name="contact-name" required></div><div><label>Business Email *</label><input type="email" name="email" required></div><div><label>Job Title / Skill *</label><input name="job-title-skill" required></div><div><label>Number of Resources</label><input name="number-of-resources"></div><div><label>Location</label><input name="location"></div><div><label>Work Arrangement</label><select name="work-arrangement"><option>Remote</option><option>Hybrid</option><option>Onsite</option></select></div><div><label>Engagement Type</label><select name="engagement-type"><option>Contract</option><option>Contract-to-Hire</option><option>Staff Augmentation</option><option>Project / SOW</option></select></div><div><label>Expected Duration</label><input name="expected-duration"></div><div><label>Target Start Date</label><input type="date" name="target-start-date"></div><div><label>Target Bill Rate / Budget</label><input name="budget"></div><div><label>Attachment</label><input type="file" name="attachment" accept=".pdf,.doc,.docx,.txt"></div></div><div><label>Job Description *</label><textarea name="job-description" required></textarea></div><div><label>Additional Notes</label><textarea name="additional-notes"></textarea></div><label class="check"><input type="checkbox" required name="privacy-acknowledgement"> I acknowledge that Kairos Covenant may use this information to review and respond to this requirement.</label><button class="btn btn-dark" type="submit">Submit Requirement</button><p class="form-note">Accepted attachments: PDF, DOC, DOCX or TXT. Do not submit sensitive personal or financial information.</p></form></div></section>
+    <section><div class="wrap split"><div><h2>Submit Requirement</h2><p>Requirement submissions are reviewed by vendor operations. Use this secure form for active staffing or project needs.</p><p>For partnership questions, contact <a href="mailto:partners@thekcsoft.com">partners@thekcsoft.com</a>.</p></div><form name="submit-requirement" method="POST" action="/api/submit-form.php" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data"><input type="hidden" name="form-name" value="submit-requirement"><p class="honeypot"><label>Do not fill this out <input name="bot-field"></label></p><div class="form-grid"><div><label>Company Name *</label><input name="company" required></div><div><label>Contact Name *</label><input name="contact-name" required></div><div><label>Business Email *</label><input type="email" name="email" required></div><div><label>Job Title / Skill *</label><input name="job-title-skill" required></div><div><label>Number of Resources</label><input name="number-of-resources"></div><div><label>Location</label><input name="location"></div><div><label>Work Arrangement</label><select name="work-arrangement"><option>Remote</option><option>Hybrid</option><option>Onsite</option></select></div><div><label>Engagement Type</label><select name="engagement-type"><option>Contract</option><option>Contract-to-Hire</option><option>Staff Augmentation</option><option>Project / SOW</option></select></div><div><label>Expected Duration</label><input name="expected-duration"></div><div><label>Target Start Date</label><input type="date" name="target-start-date"></div><div><label>Target Bill Rate / Budget</label><input name="budget"></div><div><label>Attachment</label><input type="file" name="attachment" accept=".pdf,.doc,.docx,.txt"></div></div><div><label>Job Description *</label><textarea name="job-description" required></textarea></div><div><label>Additional Notes</label><textarea name="additional-notes"></textarea></div><label class="check"><input type="checkbox" required name="privacy-acknowledgement"> I acknowledge that Kairos Covenant may use this information to review and respond to this requirement.</label><button class="btn btn-dark" type="submit">Submit Requirement</button><p class="form-note">Accepted attachments: PDF, DOC, DOCX or TXT. Do not submit sensitive personal or financial information.</p></form></div></section>
   </article>
 
   <article id="about" class="page" data-title="About Kairos Covenant | Technology Staffing &amp; Professional Services" data-description="About Kairos Covenant LLC, a technology staffing and professional-services company.">
@@ -206,12 +206,12 @@
 
   <article id="careers" class="page" data-title="Careers | Kairos Covenant Talent Network" data-description="Technology professionals can join the Kairos Covenant talent network for future opportunities.">
     <section class="page-hero"><div class="wrap"><h1>Join the Kairos Covenant Talent Network</h1><p>Technology professionals can share their experience and areas of expertise for consideration for future opportunities.</p></div></section>
-    <section><div class="wrap split"><div><h2>Talent Profile</h2><p>Use this form to share your background for future technology opportunities. Do not submit SSN, passport number, I-94, date of birth, bank information or other sensitive onboarding data through this public form.</p><p>General questions can be sent to <a href="mailto:info@thekcsoft.com">info@thekcsoft.com</a>.</p></div><form name="talent-network" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data"><input type="hidden" name="form-name" value="talent-network"><p class="honeypot"><label>Do not fill this out <input name="bot-field"></label></p><div class="form-grid"><div><label>Full Name *</label><input name="full-name" required></div><div><label>Email *</label><input type="email" name="email" required></div><div><label>Phone</label><input name="phone"></div><div><label>Current Location</label><input name="current-location"></div><div><label>Primary Skill *</label><input name="primary-skill" required></div><div><label>Years of Experience</label><input name="years-experience"></div><div><label>LinkedIn URL</label><input type="url" name="linkedin"></div><div><label>Preferred Engagement Type</label><input name="preferred-engagement"></div><div><label>Resume Upload *</label><input type="file" name="resume" accept=".pdf,.doc,.docx" required></div></div><div><label>Message</label><textarea name="message"></textarea></div><label class="check"><input type="checkbox" required name="privacy-acknowledgement"> I acknowledge that Kairos Covenant may use this information for future opportunity review.</label><button class="btn btn-dark" type="submit">Join Our Talent Network</button></form></div></section>
+    <section><div class="wrap split"><div><h2>Talent Profile</h2><p>Use this form to share your background for future technology opportunities. Do not submit SSN, passport number, I-94, date of birth, bank information or other sensitive onboarding data through this public form.</p><p>General questions can be sent to <a href="mailto:info@thekcsoft.com">info@thekcsoft.com</a>.</p></div><form name="talent-network" method="POST" action="/api/submit-form.php" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data"><input type="hidden" name="form-name" value="talent-network"><p class="honeypot"><label>Do not fill this out <input name="bot-field"></label></p><div class="form-grid"><div><label>Full Name *</label><input name="full-name" required></div><div><label>Email *</label><input type="email" name="email" required></div><div><label>Phone</label><input name="phone"></div><div><label>Current Location</label><input name="current-location"></div><div><label>Primary Skill *</label><input name="primary-skill" required></div><div><label>Years of Experience</label><input name="years-experience"></div><div><label>LinkedIn URL</label><input type="url" name="linkedin"></div><div><label>Preferred Engagement Type</label><input name="preferred-engagement"></div><div><label>Resume Upload *</label><input type="file" name="resume" accept=".pdf,.doc,.docx" required></div></div><div><label>Message</label><textarea name="message"></textarea></div><label class="check"><input type="checkbox" required name="privacy-acknowledgement"> I acknowledge that Kairos Covenant may use this information for future opportunity review.</label><button class="btn btn-dark" type="submit">Join Our Talent Network</button></form></div></section>
   </article>
 
   <article id="contact" class="page" data-title="Contact Kairos Covenant | Staffing &amp; Vendor Partnerships" data-description="Contact Kairos Covenant for vendor partnerships, staffing requirements, recruiting, contracts and general inquiries.">
     <section class="page-hero"><div class="wrap"><h1>Contact Kairos Covenant</h1><p>Use the appropriate contact below for vendor partnerships, requirements, recruiting, contracts or general inquiries.</p></div></section>
-    <section><div class="wrap split"><div><div class="contact-list"><div class="contact-item"><b>Vendor Partnerships</b><a href="mailto:partners@thekcsoft.com">partners@thekcsoft.com</a><p>For MSP relationships, supplier inquiries and business-development contact.</p></div><div class="contact-item"><b>General Inquiries</b><a href="mailto:info@thekcsoft.com">info@thekcsoft.com</a><p>For general company questions and website inquiries.</p></div><div class="contact-item"><b>Staffing, Candidate and Contract Requests</b><p>Use the contact form category that best matches your request. Submissions are routed internally to the appropriate team.</p></div></div></div><form name="contact" method="POST" action="/success" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="contact"><p class="honeypot"><label>Do not fill this out <input name="bot-field"></label></p><div class="form-grid"><div><label>Name *</label><input name="name" required></div><div><label>Business Email *</label><input type="email" name="email" required></div><div><label>Company</label><input name="company"></div><div><label>Inquiry Type</label><select name="inquiry-type"><option>Vendor Partnership</option><option>Staffing Requirement</option><option>Project / SOW</option><option>AI &amp; Data Services</option><option>Candidate Inquiry</option><option>General Inquiry</option></select></div></div><div><label>Message *</label><textarea name="message" required></textarea></div><label class="check"><input type="checkbox" required name="privacy-acknowledgement"> I acknowledge that Kairos Covenant may use this information to respond to my inquiry.</label><button class="btn btn-dark" type="submit">Contact Us</button></form></div></section>
+    <section><div class="wrap split"><div><div class="contact-list"><div class="contact-item"><b>Vendor Partnerships</b><a href="mailto:partners@thekcsoft.com">partners@thekcsoft.com</a><p>For MSP relationships, supplier inquiries and business-development contact.</p></div><div class="contact-item"><b>General Inquiries</b><a href="mailto:info@thekcsoft.com">info@thekcsoft.com</a><p>For general company questions and website inquiries.</p></div><div class="contact-item"><b>Staffing, Candidate and Contract Requests</b><p>Use the contact form category that best matches your request. Submissions are routed internally to the appropriate team.</p></div></div></div><form name="contact" method="POST" action="/api/submit-form.php" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="contact"><p class="honeypot"><label>Do not fill this out <input name="bot-field"></label></p><div class="form-grid"><div><label>Name *</label><input name="name" required></div><div><label>Business Email *</label><input type="email" name="email" required></div><div><label>Company</label><input name="company"></div><div><label>Inquiry Type</label><select name="inquiry-type"><option>Vendor Partnership</option><option>Staffing Requirement</option><option>Project / SOW</option><option>AI &amp; Data Services</option><option>Candidate Inquiry</option><option>General Inquiry</option></select></div></div><div><label>Message *</label><textarea name="message" required></textarea></div><label class="check"><input type="checkbox" required name="privacy-acknowledgement"> I acknowledge that Kairos Covenant may use this information to respond to my inquiry.</label><button class="btn btn-dark" type="submit">Contact Us</button></form></div></section>
   </article>
 
   <article id="privacy" class="page" data-title="Privacy Policy | Kairos Covenant" data-description="Privacy Policy for Kairos Covenant website inquiries, vendor inquiries and candidate submissions.">
@@ -288,6 +288,117 @@
     const nav = document.getElementById('navLinks');
     const open = nav.classList.toggle('open');
     document.getElementById('menuToggle').setAttribute('aria-expanded', String(open));
+  });
+
+  const formMessages = {
+    "vendor-partnership":{heading:"Partnership inquiry received", body:"Thank you. Your partnership inquiry has been submitted to Kairos Covenant. Our team will review the information and respond using the contact details provided."},
+    "submit-requirement":{heading:"Requirement received", body:"Thank you. Your requirement has been submitted to Kairos Covenant. Our vendor operations team will review the information and respond using the contact details provided."},
+    "talent-network":{heading:"Profile received", body:"Thank you. Your profile has been submitted to Kairos Covenant. Our recruiting team will review it for future opportunities."},
+    "contact":{heading:"Message received", body:"Thank you. Your message has been submitted to Kairos Covenant. Our team will respond using the contact details provided."}
+  };
+  const acceptedFiles = {
+    attachment:["pdf","doc","docx","txt"],
+    resume:["pdf","doc","docx"]
+  };
+  const maxFileSize = 8 * 1024 * 1024;
+  function statusFor(form){
+    let status = form.querySelector('.form-status');
+    if (!status) {
+      status = document.createElement('div');
+      status.className = 'form-status';
+      status.hidden = true;
+      status.setAttribute('role', 'status');
+      status.setAttribute('aria-live', 'polite');
+      form.appendChild(status);
+    }
+    return status;
+  }
+  function setFormStatus(form, type, html){
+    const status = statusFor(form);
+    status.className = 'form-status ' + type;
+    status.innerHTML = html;
+    status.hidden = false;
+    status.scrollIntoView({block:'nearest', behavior:'smooth'});
+  }
+  function validateFiles(form){
+    for (const input of form.querySelectorAll('input[type="file"]')) {
+      const file = input.files[0];
+      if (!file) continue;
+      const extension = file.name.split('.').pop().toLowerCase();
+      const allowed = acceptedFiles[input.name] || [];
+      if (!allowed.includes(extension) || file.size > maxFileSize) {
+        input.value = '';
+        return input.name === 'resume'
+          ? 'Resume must be a PDF, DOC or DOCX file under 8 MB.'
+          : 'Attachment must be a PDF, DOC, DOCX or TXT file under 8 MB.';
+      }
+    }
+    return '';
+  }
+  async function submitToEndpoint(form){
+    const response = await fetch('/api/submit-form.php', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: {'Accept': 'application/json'}
+    });
+    const contentType = response.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      return null;
+    }
+    const result = await response.json();
+    if (!response.ok || !result.success) {
+      throw new Error(result.message || 'Submission failed');
+    }
+    return result;
+  }
+  async function submitToNetlify(form){
+    const response = await fetch('/', {
+      method: 'POST',
+      body: new FormData(form)
+    });
+    if (!response.ok) {
+      throw new Error('Netlify form submission failed');
+    }
+    return {success:true};
+  }
+  document.querySelectorAll('form').forEach(form => {
+    form.setAttribute('action', '/api/submit-form.php');
+    statusFor(form);
+    form.addEventListener('submit', async event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const fileError = validateFiles(form);
+      if (fileError) {
+        setFormStatus(form, 'error', fileError);
+        return;
+      }
+      const submit = form.querySelector('button[type="submit"]');
+      const originalText = submit ? submit.textContent : '';
+      if (submit) {
+        submit.disabled = true;
+        submit.textContent = 'Submitting...';
+      }
+      setFormStatus(form, 'success', 'Submitting...');
+      try {
+        const result = await submitToEndpoint(form);
+        if (result === null && form.hasAttribute('data-netlify')) {
+          await submitToNetlify(form);
+        } else if (result === null) {
+          throw new Error('Submission endpoint unavailable');
+        }
+        const formName = new FormData(form).get('form-name');
+        const message = formMessages[formName] || {heading:'Submission received', body:'Thank you. Your submission has been received.'};
+        setFormStatus(form, 'success', '<strong>' + message.heading + '</strong><br>' + message.body + '<div class="btn-row"><a class="btn btn-primary" href="/" data-route>Return Home</a><a class="btn btn-ghost" href="/vendor-partners" data-route>Partner With Us</a></div>');
+        form.reset();
+        if (submit) submit.textContent = formName === 'submit-requirement' ? 'Requirement Received' : 'Submission Received';
+      } catch (error) {
+        setFormStatus(form, 'error', "We couldn't submit your requirement. Please try again or contact <a href=\"mailto:partners@thekcsoft.com\">partners@thekcsoft.com</a>.");
+        if (submit) {
+          submit.disabled = false;
+          submit.textContent = originalText;
+        }
+      }
+    });
   });
   route(location.pathname, false);
 </script>

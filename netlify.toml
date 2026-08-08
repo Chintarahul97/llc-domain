@@ -30,6 +30,12 @@
   force = true
 
 [[redirects]]
+  from = "/api/submit-form.php"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
