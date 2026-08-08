@@ -20,12 +20,12 @@ The public forms use Netlify Forms:
 - `talent-network`
 - `contact`
 
-Configure form notification emails in Netlify so submissions reach the right role-based inboxes:
+Configure form notification emails in Netlify so submissions route to the right internal inboxes. Do not list the internal routing aliases publicly on the website:
 
 - Partnerships: `partners@thekcsoft.com`
-- Requirements: `vendors@thekcsoft.com`
-- Talent network: `recruiting@thekcsoft.com`
-- General contact: `info@thekcsoft.com`
+- Requirements form internal notification: `vendors@thekcsoft.com`
+- Talent network form internal notification: `recruiting@thekcsoft.com`
+- Public general contact: `info@thekcsoft.com`
 
 If the deployed site says "This site is private", open the site in Netlify and change:
 
