@@ -9,7 +9,23 @@ Static website for Kairos Covenant LLC, ready to deploy on Netlify.
 - Entry file: `index.html`
 - Project visibility: Public
 
-The site is a single static HTML file with inline assets and a `mailto:` contact form, so it does not require Node, npm, or a build step.
+The site is a static HTML website with Netlify Forms, so it does not require Node, npm, or a build step.
+
+## Forms
+
+The public forms use Netlify Forms:
+
+- `vendor-partnership`
+- `submit-requirement`
+- `talent-network`
+- `contact`
+
+Configure form notification emails in Netlify so submissions reach the right role-based inboxes:
+
+- Partnerships: `partners@thekcsoft.com`
+- Requirements: `vendors@thekcsoft.com`
+- Talent network: `recruiting@thekcsoft.com`
+- General contact: `info@thekcsoft.com`
 
 If the deployed site says "This site is private", open the site in Netlify and change:
 
