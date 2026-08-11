@@ -32,6 +32,7 @@ Current DNS/production checks show `thekcsoft.com` is served by Netlify. When Ne
 - `SMTP_PASS`
 - `SMTP_SECURE` (`true` for port 465, otherwise `false`)
 - `MAIL_FROM` such as `Kairos Covenant Website <info@thekcsoft.com>`
+- Optional `MAIL_BCC` to copy every form submission to the admin mailbox. If omitted, submissions are copied to `SMTP_USER`.
 
 ## Netlify Deployment
 

@@ -176,6 +176,7 @@ exports.handler = async event => {
       from: process.env.MAIL_FROM || 'Kairos Covenant Website <info@thekcsoft.com>',
       to: config.to,
       cc: config.cc,
+      bcc: process.env.MAIL_BCC || process.env.SMTP_USER,
       replyTo: fields.email,
       subject: `${config.subject} - thekcsoft.com`,
       text,
