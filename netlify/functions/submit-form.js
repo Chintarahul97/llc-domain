@@ -115,6 +115,36 @@ function createTransport() {
   });
 }
 
+async function sendFormMail(transporter, config, fields, text, attachments) {
+  const originalRecipients = [config.to, config.cc].filter(Boolean).join(', ');
+  const from = process.env.MAIL_FROM || `Kairos Covenant Website <${process.env.SMTP_USER}>`;
+  const fallbackTo = process.env.MAIL_FALLBACK_TO || process.env.SMTP_USER;
+  const message = {
+    from,
+    to: config.to,
+    cc: config.cc,
+    bcc: process.env.MAIL_BCC || process.env.SMTP_USER,
+    replyTo: fields.email,
+    subject: `${config.subject} - thekcsoft.com`,
+    text,
+    attachments
+  };
+
+  try {
+    await transporter.sendMail(message);
+  } catch (error) {
+    if (!fallbackTo) throw error;
+    await transporter.sendMail({
+      ...message,
+      to: fallbackTo,
+      cc: undefined,
+      bcc: undefined,
+      subject: `[Fallback Delivery] ${message.subject}`,
+      text: `Original intended recipient(s): ${originalRecipients}\n\n${text}`
+    });
+  }
+}
+
 exports.handler = async event => {
   if (event.httpMethod !== 'POST') {
     return response(405, {success: false, message: 'Method not allowed.'});
@@ -172,16 +202,7 @@ exports.handler = async event => {
       .join('\n');
 
     const transporter = createTransport();
-    await transporter.sendMail({
-      from: process.env.MAIL_FROM || 'Kairos Covenant Website <info@thekcsoft.com>',
-      to: config.to,
-      cc: config.cc,
-      bcc: process.env.MAIL_BCC || process.env.SMTP_USER,
-      replyTo: fields.email,
-      subject: `${config.subject} - thekcsoft.com`,
-      text,
-      attachments
-    });
+    await sendFormMail(transporter, config, fields, text, attachments);
 
     return response(200, {success: true});
   } catch (error) {
