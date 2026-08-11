@@ -118,29 +118,27 @@ function createTransport() {
 async function sendFormMail(transporter, config, fields, text, attachments) {
   const originalRecipients = [config.to, config.cc].filter(Boolean).join(', ');
   const from = process.env.MAIL_FROM || `Kairos Covenant Website <${process.env.SMTP_USER}>`;
-  const fallbackTo = process.env.MAIL_FALLBACK_TO || process.env.SMTP_USER;
+  const deliveryTo = process.env.FORM_DELIVERY_TO || process.env.MAIL_FALLBACK_TO || process.env.SMTP_USER;
   const message = {
     from,
-    to: config.to,
-    cc: config.cc,
-    bcc: process.env.MAIL_BCC || process.env.SMTP_USER,
+    to: deliveryTo,
+    bcc: process.env.MAIL_BCC,
     replyTo: fields.email,
-    subject: `${config.subject} - thekcsoft.com`,
-    text,
+    subject: `${config.subject} - ${config.to}`,
+    text: `Website routing address: ${originalRecipients}\n\n${text}`,
     attachments
   };
 
   try {
     await transporter.sendMail(message);
   } catch (error) {
-    if (!fallbackTo) throw error;
+    if (!process.env.SMTP_USER || deliveryTo === process.env.SMTP_USER) throw error;
     await transporter.sendMail({
       ...message,
-      to: fallbackTo,
+      to: process.env.SMTP_USER,
       cc: undefined,
       bcc: undefined,
-      subject: `[Fallback Delivery] ${message.subject}`,
-      text: `Original intended recipient(s): ${originalRecipients}\n\n${text}`
+      subject: `[Fallback Delivery] ${message.subject}`
     });
   }
 }
